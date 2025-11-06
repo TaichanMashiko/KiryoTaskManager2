@@ -5,10 +5,10 @@
 // チュートリアル: https://developers.google.com/workspace/guides/create-credentials
 
 // 1. Google Cloudプロジェクトで作成したAPIキー
-export const API_KEY = 'YOUR_API_KEY_HERE';
+export const API_KEY = 'AIzaSyDFmyx4vgMWYKgdH8VTtuJRRFIMwKd1m7s';
 
 // 2. Google Cloudプロジェクトで作成したOAuth 2.0クライアントID
-export const CLIENT_ID = 'YOUR_CLIENT_ID_HERE.apps.googleusercontent.com';
+export const CLIENT_ID = '550261856212-rta2oeuik5jo3i732egt3adsftobsjbf.apps.googleusercontent.com';
 
 // -------------------------------------------------------------------------
 // データベースとして使用するGoogleスプレッドシートのID
