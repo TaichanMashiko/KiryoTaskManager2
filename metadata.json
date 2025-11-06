@@ -1,0 +1,5 @@
+{
+  "name": "KiryoTaskManager",
+  "description": "A web-based task management application for teams, using Google Sheets as a database. This is a modern reimplementation of an existing GAS project, built with React and Tailwind CSS.",
+  "requestFramePermissions": []
+}
