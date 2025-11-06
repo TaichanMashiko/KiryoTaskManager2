@@ -116,7 +116,7 @@ const App: React.FC = () => {
       case 'kanban':
         return <KanbanBoard tasks={tasks} onUpdateStatus={handleUpdateTaskStatus} onEditTask={handleOpenModal} />;
       case 'gantt':
-        return <GanttChart />;
+        return <GanttChart tasks={tasks} onEditTask={handleOpenModal} users={users} />;
       default:
         return <TaskTable tasks={tasks} users={users} onEdit={handleOpenModal} onDelete={handleDeleteTask} currentUser={currentUser} />;
     }
