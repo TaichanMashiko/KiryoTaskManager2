@@ -1,15 +1,16 @@
-
 import React from 'react';
-import { View } from '../types';
+import { View, User } from '../types';
 import { PlusIcon, TableIcon, KanbanIcon, GanttChartIcon } from './icons';
 
 interface HeaderProps {
   currentView: View;
   onViewChange: (view: View) => void;
   onNewTask: () => void;
+  user: User | null;
+  onSignOut: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ currentView, onViewChange, onNewTask }) => {
+const Header: React.FC<HeaderProps> = ({ currentView, onViewChange, onNewTask, user, onSignOut }) => {
   const commonButtonClasses = "px-4 py-2 rounded-md flex items-center gap-2 transition-colors duration-200";
   const activeButtonClasses = "bg-indigo-600 text-white shadow-lg";
   const inactiveButtonClasses = "bg-gray-700 hover:bg-gray-600 text-gray-300";
@@ -50,6 +51,15 @@ const Header: React.FC<HeaderProps> = ({ currentView, onViewChange, onNewTask })
           <PlusIcon className="w-5 h-5" />
           New Task
         </button>
+        {user && (
+          <div className="flex items-center gap-3 bg-gray-700 p-1 pr-3 rounded-lg">
+            <img src={user.picture} alt={user.name} className="w-8 h-8 rounded-md" />
+            <span className="text-sm font-medium hidden sm:inline">{user.name}</span>
+            <button onClick={onSignOut} className="text-xs bg-red-600/80 hover:bg-red-700/80 text-white px-2 py-1 rounded-md transition">
+              Sign Out
+            </button>
+          </div>
+        )}
       </div>
     </header>
   );
